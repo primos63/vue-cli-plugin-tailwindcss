@@ -9,8 +9,8 @@ module.exports = (api, options, rootOptions) => {
 
     api.render({
         "./src/assets/styles/main.css": "./templates/assets/styles/main.css",
-        "./src/tailwind.config.js": "./templates/assets/src/tailwind.config.js"
-    }, opts)
+        "./tailwind.config.js": "./templates/assets/tailwind.config.js"
+    }, options)
 
     const postcssConfig = {
         "plugins": {
@@ -32,7 +32,7 @@ module.exports = (api, options, rootOptions) => {
 
         // inject import
         const lastImportIndex = lines.findIndex((line) => line.match(/^import/))
-        lines[lastImportIndex] += 'import "@/assets/styles/main.css";'
+        lines[lastImportIndex] += '\nimport "@/assets/styles/main.css";'
 
         // write file
         contentMain = lines.reverse().join("\n")
