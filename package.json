@@ -1,0 +1,11 @@
+{
+  "name": "vue-cli-plugin-tailwindcss",
+  "version": "0.1.0",
+  "description": "TailwindCSS plugin for Vue CLI 3",
+  "main": "index.js",
+  "author": "Primo Sabatini",
+  "license": "MIT",
+  "devDependencies": {
+    "@vue/cli-service": "^3.0.0-rc.3"
+  }
+}
